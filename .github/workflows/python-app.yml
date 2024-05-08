@@ -18,6 +18,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: lukacat10/Flake8@v5
+      with:
+        path: .
     - uses: actions/checkout@v4
     - name: Set up Python 3.12.3
       uses: actions/setup-python@v5
