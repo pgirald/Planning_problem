@@ -181,6 +181,14 @@ class CsProblemGenTesting(unittest.TestCase):
         solution2 = [jobs[i] for i in expected]
         self.assertTrue(set(solution1) == set(solution2))
 
+    @parameterized.expand([(jobs1,), (jobs2,), (jobs3,)])
+    def test_total_income_correct(self, jobs: list[Job]):
+        expectedIncome = 0
+        solution = solveAll(jobs)
+        for job in solution["jobs"]:
+            expectedIncome += job.income
+        self.assertEqual(expectedIncome, solution["income"])
+
 
 if __name__ == "__main__":
     unittest.main()
