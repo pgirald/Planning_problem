@@ -20,10 +20,11 @@ class Job:
             self.name
             + " : "
             + str(self.income)
-            + "    "
+            + "("
             + str(self.start)
             + "-"
             + str(self.end)
+            + ")"
         )
 
 
