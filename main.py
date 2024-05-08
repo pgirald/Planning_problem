@@ -23,4 +23,4 @@ solution = solveAll(jobs)
 jobs: list[Job] = solution["jobs"]
 print("\nSolution:\n")
 for job in jobs:
-    print(job.name + " : " + str(job.income))
+    print(job)
