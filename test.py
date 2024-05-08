@@ -1,3 +1,4 @@
+from typing import Self
 import unittest
 from parameterized import parameterized
 from networkx import Graph, connected_components
@@ -188,6 +189,9 @@ class CsProblemGenTesting(unittest.TestCase):
         for job in solution["jobs"]:
             expectedIncome += job.income
         self.assertEqual(expectedIncome, solution["income"])
+
+    def test_always_fail(self):
+        self.assertTrue(False)
 
 
 if __name__ == "__main__":
