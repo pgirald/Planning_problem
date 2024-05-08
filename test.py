@@ -190,8 +190,8 @@ class CsProblemGenTesting(unittest.TestCase):
             expectedIncome += job.income
         self.assertEqual(expectedIncome, solution["income"])
 
-    def test_always_fail(self):
-        self.assertTrue(False)
+    # def test_always_fail(self):
+    #     self.assertTrue(False)
 
 
 if __name__ == "__main__":
